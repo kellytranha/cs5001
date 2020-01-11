@@ -5,9 +5,7 @@ word2 = input("Enter word #2: ")
 # Enter your code here to swap what
 # in the variables word1 and word2.
 
-swap = word1
-word1 = word2
-word2 = swap
+word1, word2 = word2, word1
 
 # Print results.
 print () # prints blank line
