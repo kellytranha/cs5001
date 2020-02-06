@@ -1,3 +1,8 @@
+NUM_OF_STAR = 1
+NUM_OF_SIDE = 2
+NUM_OF_SPACE = 1
+
+
 def is_valid(n):  # check if number is odd
     if n > 0 and (n % 2 != 0):
         return True
@@ -10,24 +15,24 @@ def main():
     while not is_valid(base):
         base = int(input("Not valid. Please enter an odd positive integer: "))
 
-    height = int((base - 3)/2)
-    space = int((base - 1)/2)
+    height = int((base - NUM_OF_STAR)/NUM_OF_SIDE - NUM_OF_STAR)
+    space = int((base - NUM_OF_STAR)/NUM_OF_SIDE)
     print(" "*space, end="")
-    print("*", end="\n")
+    print("*")
 
-    space -= 1
-    space_middle = 1
+    space -= NUM_OF_SPACE
+    space_middle = NUM_OF_STAR
 
     for i in range(height):
         print(" "*space, end="")
         print("/", end="")
         print(" "*space_middle, end="")
         print("\\", end="\n")
-        space -= 1
-        space_middle += 2
+        space -= NUM_OF_SPACE
+        space_middle += NUM_OF_SIDE
 
     print("/", end="")
-    print("_"*(base-2), end="")
+    print("_"*(base - NUM_OF_SIDE), end="")
     print("\\", end="\n")
 
 

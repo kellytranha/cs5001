@@ -1,9 +1,13 @@
 MIN_DIGIT = 2
 LINES_FULL_SYMBOLS = 2
+LENGTH_SYMBOL = 1
 
 
 def main():
-    symbol = input("Enter symbol you would like to use: ")
+    symbol = input("Enter single character symbol you would like to use: ")
+    while len(symbol) != LENGTH_SYMBOL:
+        symbol = input("Enter single character symbol you would like to use: ")
+
     width = int(input("Enter the width: "))
 
     while width < MIN_DIGIT:
