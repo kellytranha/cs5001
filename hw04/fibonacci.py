@@ -1,21 +1,30 @@
 import sys
 
+SECOND_INDEX = 1
+THIRD = 2
+
 
 def fibonacci(n):
-    if n <= 0:
-        return 0
-    elif n == 1:
-        return 1
+    first = 0
+    second = 1
+    if n <= first:
+        print(first)
+    elif n == second:
+        print(second)
     else:
-        return fibonacci(n - 2) + fibonacci(n - 1)
+        print(first)
+        print(second)
+        for i in range(THIRD, n):
+            temp = first + second
+            first = second
+            second = temp
+            print(temp)
 
 
 def main():
 
-    entry = int(sys.argv[1])
-    for i in range(0, entry):
-        x = fibonacci(i)
-        print(x)
+    entry = int(sys.argv[SECOND_INDEX])
+    fibonacci(entry)
 
 
 main()
