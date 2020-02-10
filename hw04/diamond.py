@@ -13,7 +13,7 @@ def main():
     half = height // HALF
 
     for i in range(half):
-        num_stars = (i * EVEN_FACTOR) + ODD_OFFSET
+        num_stars = (i * EVEN_FACTOR) + ODD
         num_spaces = (height - num_stars) // HALF
         print(" " * num_spaces, end="")
         print("*" * num_stars)
