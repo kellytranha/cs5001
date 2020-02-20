@@ -1,0 +1,10 @@
+1. Yes
+2. Yes
+3. Yes
+4. Yes
+5. No
+6. No
+7. Yes
+8. 10 - Because it prints the variable num, which was assigned to be 10
+9. Yes because x is a local variable
+10. Yes because the function call matches the positional arguments.
