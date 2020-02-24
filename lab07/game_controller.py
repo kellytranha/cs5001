@@ -9,11 +9,15 @@ class GameController:
 
     def start_play(self):
         pairofdice = PairOfDice()
-
+        # If you roll 7 or 11 on your first roll, you win.
         if pairofdice.current_value() in FIRST_ROUND_WIN:
             print(f"You rolled {pairofdice.current_value()}. You win!")
+        # If you roll 2, 3, or 12 on your first role, you lose.
         elif pairofdice.current_value() in FIRST_ROUND_LOSE:
             print(f"You rolled {pairofdice.current_value()}. You lose.")
+        # If you roll anything else, that's your 'point', and
+        # you keep rolling until you either roll your point
+        # again (win) or roll a 7 (lose)
         else:
             point = pairofdice.current_value()
             print(f"Your point is {point}")

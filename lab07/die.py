@@ -4,7 +4,7 @@ DIE_MIN = 1
 DIE_MAX = 6
 
 
-class Die:
+class Die:  # create class Die to create a dice
     def __init__(self):
         self.roll()
 

@@ -13,10 +13,10 @@ def print_game_des():
 
 
 def main():
-    gc = GameController()
+    gc = GameController()  # create an instance of class GameController
     print_game_des()
     input("Press enter to roll the dice...\n")
-    gc.start_play()
+    gc.start_play()  # use method start_play to play game
 
 
 main()
