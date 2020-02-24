@@ -6,8 +6,6 @@ LOSING_NUM = 7
 
 
 class GameController:
-    def __init__(self):
-        pass
 
     def start_play(self):
         pairofdice = PairOfDice()
