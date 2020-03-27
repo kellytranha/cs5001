@@ -1,0 +1,4 @@
+{
+  "game_controller_test.py::test_constructor": true, 
+  "laserbeam_test.py::test_constructor": true
+}
