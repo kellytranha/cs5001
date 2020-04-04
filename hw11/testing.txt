@@ -1,0 +1,30 @@
+- Front end testing:
+    + Set up board:
+        size
+        grids
+        available squares
+    + Set up disk:
+        color change
+        size
+- Back end tesing:
+    + Before game starts:
+        empty array
+        all spot available
+        game status = not started
+    + Game starts - player 1:
+        player 1 play -
+        array is filled with 1 spot
+        game status = in progress
+    + Game in progress:
+        player 1 cannot play anymore - invalid
+        player 2 cannot put in the same spot - invalid
+        player 2 put in available spot
+        array is filled with 2 spots
+        magic square checker not return true - invalid
+        game status = in progress
+    + Game is over:
+        player 2 cannot play anymore - invalid
+        player 1 turn - valid
+        player 1 wins whatever position - valid
+        magic square checker return true - valid
+        game status = over

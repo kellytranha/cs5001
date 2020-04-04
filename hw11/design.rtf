@@ -1,0 +1,70 @@
+NUM_ROW = # of rows
+NUM_COL = # of columns
+SIDE = length of the side of each square of the board
+SPACE = {'w': NUM_COL * SIDE, 'h': NUM_ROW * SIDE + SIDE}
+GREY = color(204, 204, 204)
+BLUE = color(0, 0, 204)
+YELLOW = color(255, 255, 0)
+RED = color(249, 16, 0)
+ 
+ 
+connect_four.pyde
+- initialize an instance of class GameController
+- def setup():
++ size of the game app: row * column + top row 
++ ellipseMode(CORNER)
+- def draw():
++ call the update method from the game_manager: use mousePressed variable to show the temporary chip when the mouse is pressed on the top row; display the game board
+- def mouseReleased():
++ call the handle_mousereleased method from game_controller.py
+ 
+game_controller.py
+GameController class:
+__init__:
++ num_row
++ num_col
++ side
++ initialize an instance of class Board
+
+- def update():
++ when the mouse is pressed on the top row, display a temporary chip on the board
+display the game board
+
+- def handle_mousereleased():
+when the mouse is released on the top row, call the method board.find_avai_row of the corresponding column; if there is a valid slot, add a chip to the board.chips nested list
+ 
+board.py
+Board class:
+__init__:
++ num_row
++ num_col
++ side
++ stroke_weight
++ create a nested list of chips of “None" elements with the size num_col * (num_row + 1) - add the empty space on top
++ is_red = True (player of red chip starts first
++ chip_count = 0 (to count later)
+
+- def display():
++ display all the chips that have been added to the board
++ draw the board on top
+
+- def display_temp_chip():
++ display an temporary chip when mouse is pressed on the top row
+
+- def _chip():
++ initialize an instance of class Chip
++ increase the chip_count by 1
++ add the newly created chip to the nested list
++ is_red = false (yellow turn)
++ if chip_count >= num_row * num_col, print “The game is over”.
+ 
+Chip.py:
+Initialize an instance of Chip class:
+__init__:
++ radius 
++ chip_color
++ x, y
++ Mouse_y
+
+- def display():
++ display all the chips that have been added to the board
