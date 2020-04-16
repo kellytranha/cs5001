@@ -1,0 +1,10 @@
+Did you attempt to make your computer player very smart -- i.e., do something more clever than just pick a random legal move?
+No I did not
+If so, were you able to accomplish this? Is your computer player as smart as you would like?
+My computer player is as smart as I could do
+How did you determine which piece to play next? Tell us about your “pick next move” algorithm
+I find all available moves then pick one of them for the computer
+How often did your computer program beat you, or your friends, or whoever tested it out for you?
+Sometimes
+How would you improve it in the future?
+I would like it to be a little bit smarter than just being random.
